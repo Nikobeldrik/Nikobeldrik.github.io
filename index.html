@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeviceLife | Venta, Reparación y Mantenimiento de Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/Icon.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="icon-menu" id="icon-menu">
+                <div class="icon-menu__bar"></div>
+            </div>
+        </div>
+        <nav>
+            <ul class="menu" id="main-menu">
+                <a href="./" class="menu__link"><img src="./assets/Device_LIFE-removebg-preview.png"; width="80"; height="60"></a>
+                <li><h5 text-align: center;>"TU MEJOR ALIADO EN TECNOLOGÍA"</h5></li>
+                <li class="menu__item"><a href="./" class="menu__link">inicio</a></li>
+                <li class="menu__item"><a href="#quienes-somos" class="menu__link">Quiénes somos</a></li>
+                <li class="menu__item"><a href="#video1" class="menu__link">video</a></li> 
+                <li class="menu__item"><a href="servicios/servicios.html" class="menu__link">Servicios</a></li>
+                <li class="menu__item"><a href="productos.html" class="menu__link">Productos</a></li>
+                <li class="menu__item"><a href="#contacto" class="menu__link">Contacto</a></li> 
+            </ul>  
+        </nav>
+    </header>
+    <main>
+        <section id="quienes-somos" class="seccion">
+            <div class="mis-vision-objetivos">
+                <div class="mvo-item">
+                    <h3>Misión</h3>
+                    <p>Nuestra misión es proporcionar soluciones tecnológicas innovadoras y confiables para satisfacer las necesidades de nuestros clientes.</p>
+                </div>
+                <div class="mvo-item">
+                    <h3>Visión</h3>
+                    <p>Queremos ser reconocidos como líderes en el mercado de reparación y mantenimiento de tecnología, brindando un servicio excepcional y productos de alta calidad.</p>
+                </div>
+                <div class="mvo-item">
+                    <h3>Objetivos</h3>
+                    <ul>
+                        <li>Brindar un servicio de reparación rápido y eficiente.</li>
+                        <li>Ofrecer productos tecnológicos de última generación.</li>
+                        <li>Garantizar la satisfacción del cliente en cada interacción.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="video1" class="seccion">
+            <div class="video_bienvenida"  style="text-align: center;">
+                <video controls src="./assets/devicelife1.mp4" style="height: 400px; width: 720px;">
+                    <source 
+                            src="video-medium.mp4"
+                            type="video/mp4"
+                            media="(max width: 800px)">
+
+                </video> 
+            </div> 
+        </section>
+        <section id="servicios" class="seccion">
+            <h2>Servicios</h2>
+            <div class="servicios-container">
+                <div class="servicio computadoras">
+                        <img src="./assets/Reparacion.jpg" alt="Reparacion de Computadoras" width="600";height="100">
+                    <h3>Reparación de Computadoras</h3>
+                    <p>Resolvemos cualquier problema que pueda tener tu computadora, desde hardware hasta software.</p>
+                    <button class="button" onclick="redirigir()">Ver más</button>
+                </div>
+                <div class="servicio smartphones">
+                    <img src="./assets/repa_smartphone.jpg" alt="Mantenimiento de Smartphones">
+                    <h3>Mantenimiento de Smartphones</h3>
+                    <p>Mantenemos tu smartphone en óptimas condiciones para un rendimiento óptimo.</p>
+                    <button class="button" onclick="redirigir()">Ver más</button>
+                </div>
+                <div class="servicio software">
+                    <img src="./assets/preview.webp" alt="Actualización de Software">
+                    <h3>Actualización de Software</h3>
+                    <p>Mantén tus dispositivos actualizados con las últimas versiones de software.</p>
+                    <button class="button" onclick="redirigir()">Ver más</button>
+                </div>
+            </div>
+        </section>
+        <section id="productos" class="seccion">
+            <h2>Productos</h2>
+            <div class="servicios-container">
+                <div class="producto">
+                    <img src="./assets/istockphoto-1449425608-1024x1024.jpg" alt="Ordenador">
+                    <h3>Ordenadores</h3>
+                    <p>Encuentra los mejores modelos de ordenadores para tus necesidades.</p>
+                    <button class="button" onclick="Vercompra()">Ver más</button>
+                </div>
+                <div class="producto">
+                    <img src="./assets/Galaxy_Z_Flip_5G_Mystic_Bronze-e1595437493174.jpg" alt="Smartphone">
+                    <h3>Smartphones</h3>
+                    <p>Descubre una amplia variedad de smartphones de última generación.</p>
+                    <button class="button" onclick="Vercompra()">Ver más</button>
+                </div>
+                <div class="producto">
+                    <img src="./assets/perifeci.jpeg" alt="Periféricos">
+                    <h3>Periféricos</h3>
+                    <p>Elige los hardware y acompañantes auxiliares a tu gusto.</p>
+                    <button class="button" onclick="Vercompra()">Ver más</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Reparación y Mantenimiento de Tecnología</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>

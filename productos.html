@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Electrónica | DeviceLife</title>
+    <link rel="stylesheet" href="products.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/Icon.jpg">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="productos.html"><img src="./assets/Device_LIFE-removebg-preview.png"; width="80"; height="60"></a>
+                <li><a href="#" id="cart-button" onclick="openCart()">Carrito <i class="fas fa-shopping-cart"></i> (0)</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="servicios/servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="index.html">Regresar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="./assets/computer-820277_1280.jpg" alt="Producto 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="./assets/apple-1282241_1280.jpg" alt="Producto 2">
+                </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/apple-606761_1280.jpg" alt="Producto 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/compugaming.jpg" alt="Producto 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/pantallascreenescrito.jpg" alt="Producto 5">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+        <section>
+            <h2>Lista de Productos Electrónicos</h2>
+            <div class="product-list">
+                 <!-- Producto 1 -->
+                 <div class="product-item">
+                    <img src="./assets/iphone13.png"; width="300"; height="300">
+                    <h3>iPhone 13</h3>
+                    <p>Apple iPhone 13 - 128GB</p>
+                    <p>Precio: $799</p>
+                    <button class="button buy-button" onclick="buyProduct('iPhone 13', 799)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('iPhone 13', 799); openCart()">Añadir al carrito</button>
+                </div>
+                <!-- Producto 2 -->
+                <div class="product-item">
+                    <img src="./assets/MacBrook Air.png"; width="300"; height="300">
+                    <h3>MacBook Air</h3>
+                    <p>Apple MacBook Air - M1</p>
+                    <p>Precio: $999</p>
+                    <button class="button buy-button" onclick="buyProduct('MacBook Air', 999)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('MacBook Air', 999)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 3 -->
+                <div class="product-item">
+                    <img src="./assets/samsung G 21.png"; width="300"; height="300">
+                    <h3>Samsung Galaxy S21</h3>
+                    <p>Samsung Galaxy S21 - 256GB</p>
+                    <p>Precio: $849</p>
+                    <button class="button buy-button" onclick="buyProduct('Samsung Galaxy S21', 849)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Samsung Galaxy S21', 849)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 4 -->
+                <div class="product-item">
+                    <img src="./assets/Dellxps13.png"; width="300"; height="300">
+                    <h3>Dell XPS 13</h3>
+                    <p>Dell XPS 13 - Intel i7</p>
+                    <p>Precio: $1199</p>
+                    <button class="button buy-button" onclick="buyProduct('Dell XPS 13', 1199)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Dell XPS 13', 1199)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 5 -->
+                <div class="product-item">
+                    <img src="./assets/5.png"; width="300"; height="300">
+                    <h3>Lenovo ThinkPad X1</h3>
+                    <p>Lenovo ThinkPad X1 - Intel i5</p>
+                    <p>Precio: $1299</p>
+                    <button class="button buy-button" onclick="buyProduct('Lenovo ThinkPad X1', 1299)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Lenovo ThinkPad X1', 1299)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 6 -->
+                <div class="product-item">
+                    <img src="./assets/6b.png"; width="300"; height="300">
+                    <h3>HP Spectre x360</h3>
+                    <p>HP Spectre x360 - Intel i7</p>
+                    <p>Precio: $1499</p>
+                    <button class="button buy-button" onclick="buyProduct('HP Spectre x360', 1499)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('HP Spectre x360', 1499)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 7 -->
+                <div class="product-item">
+                    <img src="./assets/7s.png"; width="300"; height="300">
+                    <h3>Asus ROG Zephyrus G14</h3>
+                    <p>Asus ROG Zephyrus G14 - AMD Ryzen 9</p>
+                    <p>Precio: $1599</p>
+                    <button class="button buy-button" onclick="buyProduct('Asus ROG Zephyrus G14', 1599)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Asus ROG Zephyrus G14', 1599)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 8 -->
+                <div class="product-item">
+                    <img src="./assets/8s.png"; width="300"; height="300">
+                    <h3>Microsoft Surface Pro 7</h3>
+                    <p>Microsoft Surface Pro 7 - Intel i5</p>
+                    <p>Precio: $749</p>
+                    <button class="button buy-button" onclick="buyProduct('Microsoft Surface Pro 7', 749)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Microsoft Surface Pro 7', 749)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 9 -->
+                <div class="product-item">
+                    <img src="./assets/9s.png"; width="300"; height="300">
+                    <h3>Amazon Echo Dot</h3>
+                    <p>Amazon Echo Dot - 4ta Generación</p>
+                    <p>Precio: $49.99</p>
+                    <button class="button buy-button" onclick="buyProduct('Amazon Echo Dot', 49.99)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Amazon Echo Dot', 49.99)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 10 -->
+                <div class="product-item">
+                    <img src="./assets/10s.png"; width="300"; height="300">
+                    <h3>Google Nest Hub</h3>
+                    <p>Google Nest Hub - 2da Generación</p>
+                    <p>Precio: $99.99</p>
+                    <button class="button buy-button" onclick="buyProduct('Google Nest Hub', 99.99)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Google Nest Hub', 99.99)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 11 -->
+                <div class="product-item">
+                    <img src="./assets/11s.png"; width="300"; height="300">
+                    <h3>Bose QuietComfort 35 II</h3>
+                    <p>Bose QuietComfort 35 II</p>
+                    <p>Precio: $299</p>
+                    <button class="button buy-button" onclick="buyProduct('Bose QuietComfort 35 II', 299)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Bose QuietComfort 35 II', 299)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 12 -->
+                <div class="product-item">
+                    <img src="./assets/12s.png"; width="300"; height="300">
+                    <h3>Sony WH-1000XM4</h3>
+                    <p>Sony WH-1000XM4</p>
+                    <p>Precio: $349</p>
+                    <button class="button buy-button" onclick="buyProduct('Sony WH-1000XM4', 349)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Sony WH-1000XM4', 349)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 13 -->
+                <div class="product-item">
+                    <img src="./assets/13s.png"; width="300"; height="300">
+                    <h3>iPad Pro 12.9</h3>
+                    <p>Apple iPad Pro 12.9 - 256GB</p>
+                    <p>Precio: $1099</p>
+                    <button class="button buy-button" onclick="buyProduct('iPad Pro 12.9', 1099)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('iPad Pro 12.9', 1099)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 14 -->
+                <div class="product-item">
+                    <img src="./assets/15s.png"; width="300"; height="300">
+                    <h3>Samsung Galaxy Tab S7</h3>
+                    <p>Samsung Galaxy Tab S7 - 128GB</p>
+                    <p>Precio: $649</p>
+                    <button class="button buy-button" onclick="buyProduct('Samsung Galaxy Tab S7', 649)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Samsung Galaxy Tab S7', 649)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 15 -->
+                <div class="product-item">
+                    <img src="./assets/16s.png"; width="300"; height="300">
+                    <h3>Microsoft Surface Go 2</h3>
+                    <p>Microsoft Surface Go 2 - Intel Pentium</p>
+                    <p>Precio: $399</p>
+                    <button class="button buy-button" onclick="buyProduct('Microsoft Surface Go 2', 399)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Microsoft Surface Go 2', 399)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 16 -->
+                <div class="product-item">
+                    <img src="./assets/17s.png"; width="300"; height="300">
+                    <h3>JBL Flip 5</h3>
+                    <p>JBL Flip 5 - Altavoz Bluetooth</p>
+                    <p>Precio: $119.99</p>
+                    <button class="button buy-button" onclick="buyProduct('JBL Flip 5', 119.99)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('JBL Flip 5', 119.99)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 17 -->
+                <div class="product-item">
+                    <img src="./assets/18s.png"; width="300"; height="300">
+                    <h3>Razer Blade 15</h3>
+                    <p>Razer Blade 15 - Intel i7</p>
+                    <p>Precio: $1699</p>
+                    <button class="button buy-button" onclick="buyProduct('Razer Blade 15', 1699)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Razer Blade 15', 1699)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 18 -->
+                <div class="product-item">
+                    <img src="./assets/19s.png"; width="300"; height="300">
+                    <h3>Apple Watch Series 6</h3>
+                    <p>Apple Watch Series 6 - GPS</p>
+                    <p>Precio: $399</p>
+                    <button class="button buy-button" onclick="buyProduct('Apple Watch Series 6', 399)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Apple Watch Series 6', 399)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 19 -->
+                <div class="product-item">
+                    <img src="./assets/20s.png"; width="300"; height="300">
+                    <h3>Garmin Fenix 6</h3>
+                    <p>Garmin Fenix 6 - GPS</p>
+                    <p>Precio: $599</p>
+                    <button class="button buy-button" onclick="buyProduct('Garmin Fenix 6', 599)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Garmin Fenix 6', 599)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 20 -->
+                <div class="product-item">
+                    <img src="./assets/21s.png"; width="300"; height="300">
+                    <h3>GoPro HERO9</h3>
+                    <p>GoPro HERO9 - Cámara de Acción</p>
+                    <p>Precio: $449</p>
+                    <button class="button buy-button" onclick="buyProduct('GoPro HERO9', 449)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('GoPro HERO9', 449)">Añadir al carrito</button>
+                </div>
+                <!-- Producto 21 -->
+                <div class="product-item">
+                    <img src="./assets/22s.png"; width="300"; height="300">
+                    <h3>Nintendo Switch</h3>
+                    <p>Nintendo Switch - Consola</p>
+                    <p>Precio: $299</p>
+                    <button class="button buy-button" onclick="buyProduct('Nintendo Switch', 299)">Comprar</button>
+                    <button class="button cart-button" onclick="addToCart('Nintendo Switch', 299)">Añadir al carrito</button>
+                </div>
+                <!-- Agrega más productos según sea necesario -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Devicelife Tienda Electrónica</p>
+    </footer>
+
+    <!-- Ventana del carrito -->
+    <div id="cart-window" class="cart-window">
+        <h3>Carrito de Compras</h3>
+        <ul id="cart-items"></ul>
+        <p style="text-align: right;">Total: $<span id="cart-total">0</span></p>
+        <button class="button" onclick="closeCart()">Cerrar</button>
+        <button class="button" onclick="checkout()">Comprar</button>
+    </div>
+
+    <!-- Ventana de forma de pago -->
+    <div id="payment-window" class="payment-window">
+        <h3>Forma de Pago</h3>
+        <form id="payment-form">
+            <label for="payment-method">Seleccione método de pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="yappy">Yappy</option>
+            </select>
+            <div id="payment-details"></div>
+            <button type="submit" class="button">Realizar Pago</button>
+        </form>
+        <button class="button" onclick="closePayment()">Cerrar</button>
+    </div>
+
+    <!-- Mensaje de éxito -->
+    <div id="success-message" class="success-message">
+        <h3>Compra Realizada con Éxito</h3>
+        <p id="invoice"></p>
+        <button class="button" onclick="closeSuccess()">Cerrar</button>
+    </div>
+
+    <script src="products.js"></script>
+</body>
+</html>

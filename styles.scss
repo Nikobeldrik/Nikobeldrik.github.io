@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+  $width: 30px;
+  $height: 4px;
+  $menu-color: #fff;
+
+
+body {
+  margin: 0;
+  font-family: Outfit;
+  background-image: url("./assets/Fondo1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+/* Header */
+.top-bar {
+  background: #333;
+  @media screen and (min-width: 768px){
+    display: none;
+  }
+}
+
+.icon-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+
+&__bar {
+  background: $menu-color;
+  width: $width;
+  height: $height;
+  border-radius: $height / 2;
+  position: relative;
+
+
+&:after,&:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: $width;
+  height: $height;
+  border-radius: $height/ 2;
+  background: $menu-color;
+  top: -.5em;
+}
+
+&:after {
+  top: .5em;
+}
+}
+}
+/* Menu */
+.menu {
+  position: fixed;
+  background: #333;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+  transform: translateX(-100%);
+  transition: transform .2s;
+  width: 100%;
+  color: white;
+  z-index: 1000;
+
+@media screen and (min-width:768px) {
+  display: flex;
+  justify-content: space-evenly;
+  transform:translateX(0);
+}
+
+&--show{
+  transform:translateX(0);
+}
+
+&__item {
+  padding: 0.5em;
+  border-bottom: 50px solid $menu-color;
+ @media screen and (min-width:768px) {
+  border-bottom: none;
+ }
+ text-transform: uppercase;
+ a{
+  text-align: center;
+  color:#ffffff;
+  transition: background-color 0.5s;
+}
+&:hover {
+  background: rgba(146, 240, 209, 0.753);
+  border-radius: 5px;
+height: 15px;
+a{
+  text-align: center;
+  color:#000000;
+}
+}
+}
+&__link {
+  color: $menu-color;
+  text-decoration: none;
+}
+}
+
+.menu nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu nav ul li {
+  float: left;
+}
+
+.menu nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu nav ul li a:hover {
+  background-color: #111;
+}
+
+section {
+  padding: 60px 20px; /* Añade un poco de relleno para que el contenido no se oculte debajo del menú fijo */
+  margin-top: 0px; /* Ajusta este valor según la altura de tu menú fijo */
+}
+
+h2{
+  color: #fff;
+  text-align: center;
+}
+h5{
+  text-transform: uppercase;
+  color: #fff;
+}
+
+
+/* Misión, Visión, Objetivos */
+.mis-vision-objetivos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.mvo-item {
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.877);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mvo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgb(13, 56, 245);
+}
+
+.mvo-item h3 {
+  margin-top: 0;
+}
+
+/* Servicios y Productos */
+.servicios-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.servicio,
+.producto {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #010236;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.918);
+}
+
+.servicio:hover,
+.producto:hover {
+  background: rgba(201, 255, 237, 0.856);
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(13, 56, 245);
+}
+
+.servicio img,
+.producto img {
+  max-width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Botones */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Ajustes de pantalla */
+@media screen and (min-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateX(0);
+  }
+
+  .menu__item {
+    border-bottom: none;
+  }
+}
